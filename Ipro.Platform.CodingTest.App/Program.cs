@@ -42,6 +42,7 @@ namespace Ipro.Platform.CodingTest.App
         {
             for(int i = result.Count -1; i >= 0; --i)
             {
+                if (result[i].Occurrences > 0)
                 Console.WriteLine($"Filename: {result[i].GetShortName()}, Occurences: {result[i].Occurrences}");
             }
         }
