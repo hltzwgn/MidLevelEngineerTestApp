@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Company>Ipro Tech, LLC</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\DeclarationOfIndependence.txt" />
+    <None Remove="Resources\GettysburgAddress.txt" />
+    <None Remove="Resources\IHaveADream.txt" />
+    <None Remove="Resources\JohnFKennedyInauguralAddress.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\DeclarationOfIndependence.txt" />
+    <EmbeddedResource Include="Resources\GettysburgAddress.txt" />
+    <EmbeddedResource Include="Resources\IHaveADream.txt" />
+    <EmbeddedResource Include="Resources\JohnFKennedyInauguralAddress.txt" />
+  </ItemGroup>
+
+</Project>
