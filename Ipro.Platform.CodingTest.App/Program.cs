@@ -40,10 +40,17 @@ namespace Ipro.Platform.CodingTest.App
         }
         static void OutPutResults(List<TxtResult> result)
         {
-            for(int i = result.Count -1; i >= 0; --i)
+            if (result.Count > 0)
             {
-                if (result[i].Occurrences > 0)
-                Console.WriteLine($"Filename: {result[i].GetShortName()}, Occurences: {result[i].Occurrences}");
+                for (int i = result.Count - 1; i >= 0; --i)
+                {
+                    if (result[i].Occurrences > 0)
+                        Console.WriteLine($"Filename: {result[i].GetShortName()}, Occurences: {result[i].Occurrences}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No results!");
             }
         }
     }
