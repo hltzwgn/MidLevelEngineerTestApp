@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System;
+
 namespace Ipro.Platform.CodingTest.App
 {
     class Program
     {
-        public static ResourceSearchManager _searchEngine = new ResourceSearchManager();
+        public static DocumentManager _searchEngine = new DocumentManager();
         static void Main(string[] args)
         {
             string searchTerm = string.Empty;
