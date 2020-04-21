@@ -18,7 +18,8 @@ namespace Ipro.Platform.CodingTest.App
                 TxtResult result = new TxtResult();
                 result.Occurrences = r.GetTermOccurences(searchTerm);
                 result.FileName = r.GetResourceName();
-                results.Add(result);
+                if(result.Occurrences > 0)
+                    results.Add(result);
             }
             return results;
         }
