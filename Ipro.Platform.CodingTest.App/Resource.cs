@@ -58,7 +58,7 @@ namespace  Ipro.Platform.CodingTest.App
             foreach(string s in stringList)
             {
                 string modifiedString = s.ToLower();
-                RegExRemove("[^a-z0-9] ", ref modifiedString,"");
+                RegExRemove("[^a-z0-9 ]", ref modifiedString,"");
                 AddToWordDictionary(modifiedString);
             }
         }
@@ -66,7 +66,7 @@ namespace  Ipro.Platform.CodingTest.App
         {
             string modifiedText = text;
             Regex reg_exp = new Regex(regPattern);
-            reg_exp.Replace(modifiedText,replaceValue);
+            modifiedText = reg_exp.Replace(modifiedText,replaceValue);
             text = modifiedText;
         }
         private void AddToWordDictionary(string text)
